@@ -300,6 +300,9 @@ void drawCrop (Cairo::RefPtr<Cairo::Context> cr, int imx, int imy, int imw, int 
                 horiz_ratios.push_back (2.0 / 3.0);
                 vert_ratios.push_back (1.0 / 3.0);
                 vert_ratios.push_back (2.0 / 3.0);
+            } else if (cparams.guide == "Cross") {
+                horiz_ratios.push_back (0.5);
+                vert_ratios.push_back (0.5);
             } else if (!strncmp(cparams.guide.data(), "Harmonic means", 14)) {
                 horiz_ratios.push_back (1.0 - 0.618);
                 horiz_ratios.push_back (0.618);
